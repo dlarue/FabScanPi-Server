@@ -105,16 +105,17 @@ def params():
 
 
     data_files = [
+        ('/etc/sudoers.d/', ['debian/fabscanpi-sudoers']),
         ('/etc/fabscanpi/', ['src/fabscan/config/default.settings.json']),
         ('/etc/fabscanpi/', ['src/fabscan/config/default.config.json']),
-        ('/var/www/', ['src/www/index.html']),
-        ('/var/www/style/',['src/www/style/app.css', 'src/www/style/lib.css']),
-        ('/var/www/js/',['src/www/js/app.js', 'src/www/js/lib.js']),
-        ('/var/www/js/locales/en/',['src/www/js/locales/en/i18n.js']),
-        ('/var/www/js/locales/de/',['src/www/js/locales/de/i18n.js']),
-        ('/var/www/icons/', ['src/www/icons/icon_mesh.svg','src/www/icons/icon_scan.svg','src/www/icons/icon_pointcloud.svg','src/www/icons/favicon.png', 'src/www/icons/spinner.gif', 'src/www/icons/logo.png']),
-        ('/var/www/fonts/', ['src/www/fonts/fontawesome-webfont.woff2', 'src/www/fonts/fontawesome-webfont.woff', 'src/www/fonts/fontawesome-webfont.ttf']),
-        ('/var/www/style/fonts/', ['src/www/style/fonts/slick.woff', 'src/www/style/fonts/slick.ttf'])
+        ('/usr/share/fabscanpi/', ['src/www/index.html']),
+        ('/usr/share/fabscanpi/style/',['src/www/style/app.css', 'src/www/style/lib.css']),
+        ('/usr/share/fabscanpi/js/',['src/www/js/app.js', 'src/www/js/lib.js']),
+        ('/usr/share/fabscanpi/js/locales/en/',['src/www/js/locales/en/i18n.js']),
+        ('/usr/share/fabscanpi/locales/de/',['src/www/js/locales/de/i18n.js']),
+        ('/usr/share/fabscanpi/icons/', ['src/www/icons/icon_mesh.svg','src/www/icons/icon_scan.svg','src/www/icons/icon_pointcloud.svg','src/www/icons/favicon.png', 'src/www/icons/spinner.gif', 'src/www/icons/logo.png']),
+        ('/usr/share/fabscanpi/fonts/', ['src/www/fonts/fontawesome-webfont.woff2', 'src/www/fonts/fontawesome-webfont.woff', 'src/www/fonts/fontawesome-webfont.ttf']),
+        ('/usr/share/fabscanpi/style/fonts/', ['src/www/style/fonts/slick.woff', 'src/www/style/fonts/slick.ttf'])
 
     ]
 

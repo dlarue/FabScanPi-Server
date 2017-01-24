@@ -3,7 +3,7 @@ from urllib2 import URLError
 
 from mock import patch
 
-from fabscan.util.FSUpdate import get_latest_version_tag, upgrade_is_available
+from fabscan.util.FSUpdate import get_latest_version_tag, upgrade_is_available, do_upgrade
 
 
 class FSUpdateTestCase(unittest.TestCase):
@@ -29,6 +29,11 @@ class FSUpdateTestCase(unittest.TestCase):
 		upgrade_available, upgrade_version = upgrade_is_available("0.3.1")
 		self.assertFalse(upgrade_available)
 		self.assertEqual(upgrade_version, "0.3.1")
+
+	@patch('os.system')
+	def test_do_upgrade(self, system_mock):
+		do_upgrade()
+		system_mock.assert_called_once_with('nohup bash -c "sudo apt-get update && sudo apt-get dist-upgrade" > /var/log/fabscanpi/upgrade.log')
 
 
 if __name__ == '__main__':
