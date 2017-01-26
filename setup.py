@@ -22,7 +22,7 @@ EXTRA_REQUIRES = dict()
 def version_number():
     with open('debian/changelog', 'r') as changelog_file:
         first_line = changelog_file.readline(100)
-        result = re.match("fabscanpi-server \(([0-9\.a-z\-]+)\) ([a-z]+); urgency=([a-z]+)", first_line)
+        result = re.match("fabscanpi-server \(([0-9\.a-z\-]+)\) ([a-zA-Z]+); urgency=([a-z]+)", first_line)
         if result is None:
             return '0.0.0'
         return result.group(1)
